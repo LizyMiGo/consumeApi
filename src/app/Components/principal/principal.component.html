@@ -1,1 +1,12 @@
-<p>principal works!</p>
+<div> 
+    <p>principal works!</p>
+
+    <ul>
+        @for (item of principalList; track $index) {
+          <li>{{ item.userId }}</li>
+          <li>{{ item.id }}</li>
+          <li>{{ item.title }}</li>
+          <li>{{ item.body }}</li>
+        }
+      </ul>
+</div>

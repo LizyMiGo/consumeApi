@@ -9,20 +9,29 @@ import { PrincipalService } from '../../Services/principal.service';
   styleUrl: './principal.component.css'
 })
 export class PrincipalComponent implements OnInit{
+
+  principalList: PrincipalInterface []=[];
   constructor(private principalService: PrincipalService) {}
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.getProducts()
   }
 
   getProducts(){
     this.principalService.getProducts().subscribe({
       next: (result) =>  {
-
+        this.principalList = result;
       },
       error: (err) =>{
         console.log(err);
       }
     })
   }
+}
+
+export interface PrincipalInterface{
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
 }
 
