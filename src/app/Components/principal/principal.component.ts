@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { PrincipalService } from '../../Services/principal.service';
 
 @Component({
   selector: 'app-principal',
@@ -7,6 +8,21 @@ import { Component } from '@angular/core';
   templateUrl: './principal.component.html',
   styleUrl: './principal.component.css'
 })
-export class PrincipalComponent {
+export class PrincipalComponent implements OnInit{
+  constructor(private principalService: PrincipalService) {}
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
 
+  getProducts(){
+    this.principalService.getProducts().subscribe({
+      next: (result) =>  {
+
+      },
+      error: (err) =>{
+        console.log(err);
+      }
+    })
+  }
 }
+
