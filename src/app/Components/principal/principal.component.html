@@ -1,12 +1,18 @@
 <div> 
-    <p>principal works!</p>
+    <h1 class="title">ITEMS</h1>
 
-    <ul>
+    <div class="container">
         @for (item of principalList; track $index) {
-          <li>{{ item.userId }}</li>
-          <li>{{ item.id }}</li>
-          <li>{{ item.title }}</li>
-          <li>{{ item.body }}</li>
+            <div class="card">
+                <div class="cardTitle">
+                    <p class="userid">User ID: {{ item.userId }}</p>
+                    <p class="id">ID: {{ item.id }}</p>
+                </div>
+                <div class="cardBody">
+                    <p>{{ item.title }}</p>
+                    <p>{{ item.body }}</p>
+                </div>
+            </div>
         }
-      </ul>
+    </div>
 </div>
