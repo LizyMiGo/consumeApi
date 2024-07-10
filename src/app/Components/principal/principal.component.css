@@ -1,5 +1,10 @@
+.containerBody{
+    background-color: #90A9B7;
+}
+
 .title{
     text-align: center;
+    margin: 5%;
 }
 
 .container{
@@ -9,16 +14,20 @@
     
 }
 .card{
-    background-color: #D4C0E1;
-    border-radius: 20px;
+    background-color: #EFD09E;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
     margin-inline: 2%;
     margin-bottom: 1%;
     width:15%;
 }
+.card:hover{
+    background-color: #D4AA7D;
+}
 .cardTitle{
     display: flex;
     flex-direction: row;
-    background-color: #B99ACD;
+    background-color: #272727;
     padding: 15px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -28,9 +37,7 @@
     padding: 40px;
     border-radius: 20px;
 }
-.userid{
-    padding-inline: 10%;
-}
 .id{
     padding-inline: 10%;
+    color: white;
 }

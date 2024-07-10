@@ -1,11 +1,11 @@
-<div> 
+<body class="containerBody"> 
     <h1 class="title">ITEMS</h1>
 
     <div class="container">
         @for (item of principalList; track $index) {
             <div class="card">
                 <div class="cardTitle">
-                    <p class="userid">User ID: {{ item.userId }}</p>
+                    <p class="id">User ID: {{ item.userId }}</p>
                     <p class="id">ID: {{ item.id }}</p>
                 </div>
                 <div class="cardBody">
@@ -15,4 +15,4 @@
             </div>
         }
     </div>
-</div>
+</body>
